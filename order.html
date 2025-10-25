@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgerlicious - Build Your Own Burger</title>
+     <link rel="icon" href="images/burgerlogov2.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Welcome Back, Valued Customer!</h1>
+    </header>
+
+    <form action="submission.html" method="get">
+        <h4>Build your Burgerlicious Burger</h4>
+        <hr>
+
+        <section class="protein">
+            <span>What type of protein would you like?</span>
+            <br><br>
+            <input type="radio" id="patty" name="patty" required>
+            <label for="patty">Patty</label>
+        </section>
+        <hr>
+
+        <section class="patties">
+            <label for="amount">How many patties would you like?</label>
+            <input id="amount" type="number" name="amount" size="2" max="10" min="1" required> 
+        </section>
+        <hr>
+
+        <section class="cooked">
+            <label for="doneness">How would you like your patty cooked?</label>
+            <br><br>
+            <span>Rare</span>
+            <input type="range" id="doneness" name="doneness" required>
+            <span>Well Done</span>
+        </section>
+        <hr>
+
+        <section class="toppings">
+            <span>Select the following toppings you'd like...</span>
+            <br>
+            <label for="lettuce">Lettuce</label>
+            <input type="checkbox" id="lettuce" name="toppings">
+            <br>
+            <label for="tomato">Tomato</label>
+            <input type="checkbox" id="tomato" name="toppings">
+            <br>
+            <label for="pickels">Pickels</label>
+            <input type="checkbox" id="pickles" name="toppings">
+        </section>
+        <hr>
+
+        <section class="cheese">
+            <span>Add cheese?</span>
+            <br><br>
+            <input type="radio" id="cheese_yes" name="cheese" required>
+            <label for="cheese_yes">Yes</label>
+            <input type="radio" id="cheese_no" name="cheese" required>
+            <label for="cheese_no">No</label>
+        </section>
+        <hr>
+
+        <section class="bun_type">
+            <label for="bun">What kind of bun would you like?</label>
+            <select name="bun" id="bun" required>
+                <option selected disabled></option>
+                <option value="sesame">Sesame</option>
+                <option value="potato">Potato</option>
+                <option value="pretzel">Pretzel</option>
+                <option value="no_bun">No Bun</option>
+            </select>
+        </section>
+        <hr>
+
+        <section class="extra-info">
+            <label for="extra">Any extra instructions? (Optional)</label>
+            <br><br>
+            <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+        </section>
+        <hr>
+        <input type="submit" value="Submit Order">
+    </form>
+</body>
+</html>
