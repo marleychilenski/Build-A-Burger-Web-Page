@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burgerlicious - Build Your Own Burger</title>
-     <link rel="icon" href="images/burgerlogov2.png" type="image/png">
+    <link rel="icon" href="images/burgerlogov2.png" type="image/png">
 </head>
-<body>
-    <header>
-        <h1>Welcome Back, Valued Customer!</h1>
-    </header>
 
+<body>
+ <header>
+   <h1>Welcome, Valued Customer!</h1>
+ </header>
+
+ <main>
     <form action="submission.html" method="get">
-        <h4>Build your Burgerlicious Burger</h4>
-        <hr>
+    <fieldset>
+    <legend>Build your Burgerlicious Burger</legend>
+    
+    <br>
 
         <section class="protein">
             <span>What type of protein would you like?</span>
@@ -21,22 +25,25 @@
             <input type="radio" id="patty" name="patty" required>
             <label for="patty">Patty</label>
         </section>
-        <hr>
+       
+        <br><br>
 
         <section class="patties">
             <label for="amount">How many patties would you like?</label>
-            <input id="amount" type="number" name="amount" size="2" max="10" min="1" required> 
+            <input id="amount" type="number" name="amount" min="1" max="10" required>
         </section>
-        <hr>
+       
+        <br><br>
 
         <section class="cooked">
             <label for="doneness">How would you like your patty cooked?</label>
             <br><br>
             <span>Rare</span>
-            <input type="range" id="doneness" name="doneness" required>
+            <input type="range" id="doneness" name="doneness" min="1" max="5" step="1" required>
             <span>Well Done</span>
         </section>
-        <hr>
+       
+        <br><br>
 
         <section class="toppings">
             <span>Select the following toppings you'd like...</span>
@@ -47,10 +54,11 @@
             <label for="tomato">Tomato</label>
             <input type="checkbox" id="tomato" name="toppings">
             <br>
-            <label for="pickels">Pickels</label>
+            <label for="pickels">Pickles</label>
             <input type="checkbox" id="pickles" name="toppings">
         </section>
-        <hr>
+    
+        <br><br>
 
         <section class="cheese">
             <span>Add cheese?</span>
@@ -60,7 +68,8 @@
             <input type="radio" id="cheese_no" name="cheese" required>
             <label for="cheese_no">No</label>
         </section>
-        <hr>
+      
+        <br><br>
 
         <section class="bun_type">
             <label for="bun">What kind of bun would you like?</label>
@@ -72,7 +81,8 @@
                 <option value="no_bun">No Bun</option>
             </select>
         </section>
-        <hr>
+        
+        <br><br>
 
         <section class="extra-info">
             <label for="extra">Any extra instructions? (Optional)</label>
@@ -81,6 +91,14 @@
         </section>
         <hr>
         <input type="submit" value="Submit Order">
-    </form>
+   </fieldset>
+ </form>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Marley Chilenski</p>
+</footer>
+
 </body>
 </html>
